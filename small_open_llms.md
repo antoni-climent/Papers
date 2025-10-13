@@ -1,4 +1,4 @@
-## 🧠 Small / Open LLMs
+## 🤖 Small / Open LLMs
 
 ### 2019 — ALBERT: A Lite BERT
 **Paper:** [arXiv](https://arxiv.org/abs/1909.11942)  

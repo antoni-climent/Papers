@@ -1,11 +1,10 @@
-## 🔁 Continuous Improvement
+## ♻️ Continuous Improvement
 
 ### May 2025 — AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms
 **Paper:** [AlphaEvolve (PDF)](https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/AlphaEvolve.pdf)  
 **Blog:** [DeepMind Announcement](https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/)  
 
-**Summary:**  
-Announced on May 14, 2025, AlphaEvolve is an evolutionary coding agent powered by large language models for general-purpose algorithm discovery and optimization.  
+**Summary:**  Announced on May 14, 2025, AlphaEvolve is an evolutionary coding agent powered by large language models for general-purpose algorithm discovery and optimization.  
 AlphaEvolve pairs the creative problem-solving capabilities of Gemini models with automated evaluators that verify answers, and uses an evolutionary framework to improve upon the most promising ideas.
 
 ---

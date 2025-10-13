@@ -9,14 +9,5 @@ A living repository of papers on small models, reasoning, architectures, and dis
 - ♻️ [Continuous Improvement](continuous_improvement.md)
 - 🧯 [Safety](safety.md)
 - ⚖️ [Ethical Issues](ethical_issues.md)
-- 📎 [Resources](resources.md) 
+- 📚 [Resources](resources.md) 
 
-Template to add a paper:
-
-<details><summary>Title</summary>
-
-Paper:[Name](link)
-
-Summary:
-
-</details>

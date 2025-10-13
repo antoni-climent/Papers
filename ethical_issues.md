@@ -1,4 +1,4 @@
-## 🧠 Ethical Issues / AI and Societal Changes
+## ⚖️ Ethical Issues / AI and Societal Changes
 
 ### June 2025 — Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task
 **Paper:** [Your Brain on ChatGPT](https://arxiv.org/abs/2506.08872)  

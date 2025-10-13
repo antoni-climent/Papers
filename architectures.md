@@ -1,4 +1,4 @@
-## 🏗️ Architectures
+## 🏛️ Architectures
 
 ### 2023 — Mamba: Linear-Time Sequence Modeling with Selective State Spaces
 **Paper:** [Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DVCHv1kAAAAJ&citation_for_view=DVCHv1kAAAAJ:7PzlFSSx8tAC)  

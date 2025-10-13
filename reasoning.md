@@ -13,20 +13,19 @@ A critical post on LinkedIn challenges and expands on this paper’s conclusions
 
 ### 2025 — DeepSeek-R1: Reinforcement Learning for Reasoning
 **Paper:** [arXiv:2501.12948](https://arxiv.org/abs/2501.12948)  
-**Summary:**  
-Introduces *Grouped Related Policy Optimization (GRPO)*, a novel RL method that enhances the reasoning capabilities of pretrained models.  
+**Summary:** Introduces *Grouped Related Policy Optimization (GRPO)*, a novel RL method that enhances the reasoning capabilities of pretrained models.  
 DeepSeek-R1 combines supervised fine-tuning (SFT) and RL, and finds that for small models, distillation from larger models outperforms RL for improving reasoning.
 
 ---
 
 ### April 2025 — From System 1 to System 2: A Survey of Reasoning Large Language Models
-**Paper:** arXiv (link not found yet)  
+**Paper:** [arXiv](https://arxiv.org/abs/2502.17419)
 **Summary:** TODO
 
 ---
 
 ### June 2025 — The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity
-**Paper:** arXiv (link not found yet)  
+**Paper:** [arXiv](https://arxiv.org/abs/2506.06941)
 **Summary:**  
 Examines how large reasoning models allocate computational resources relative to problem complexity.  
 Finds that they overthink simple problems, underthink hard ones, and perform best on medium-difficulty tasks.  
