@@ -36,3 +36,11 @@ Paper: arXiv
 Summary: A new architecture proposed by Google DeepMind that allows models to dynamically learn recursive depths per token, enabling adaptive computation. This makes Transformer-based language models more efficient and compact, opening pathways for flexible reasoning at lower compute cost.
 
 </details>
+
+<details><summary>December 2024 - TinyThinker: Distilling Reasoning through Coarse-to-Fine Knowledge Internalization with Self-Reflection </summary>
+
+Paper: [arXiv](https://arxiv.org/abs/2412.08024)
+
+Summary: It does distillation from the maxarg of the teacher to start reasoning with 1. General info 2. Specific info for each possible answer 3. Summary + lets the student self-reflect while doing DPO at the end to “consolidate” learning.
+
+</details>

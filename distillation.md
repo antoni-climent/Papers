@@ -36,3 +36,17 @@ Summary:
 - Efficiency & accessibility: Enables effective reasoning pipelines with lower compute, faster iteration, and improved student models.
 
 </details>
+
+<details><summary>November 2024 - Learning with Less: Knowledge Distillation from Large Language Models via Unlabeled Data</summary>
+
+Paper: [arXiv](https://arxiv.org/abs/2411.08028)
+
+Summary: Text classification with data curation. Seeks high teacher confidence (maxarg prob) and high student uncertainty (output entropy) to improve pseudo-label accuracy and data usefulness for the student respectively.
+
+The threshold is computed using moving averages and a manual adjustment for each label (some classifications are easier than others).
+
+This technique (LLKD) improves accuracy and reduces computation needed for fine-tunning.
+
+</details>
+
+
