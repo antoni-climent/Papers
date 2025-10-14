@@ -2,7 +2,6 @@
 
 ### April 2025 — RLVR: Does Reinforcement Learning Really Incentivize Reasoning?
 **Paper:** [arXiv:2504.13837](https://arxiv.org/abs/2504.13837)  
-**Authors:** Yang Yue et al.  
 **Summary:**  
 The paper evaluates RL with Verifiable Rewards (RLVR) and finds that it does **not** extend reasoning capabilities beyond the base model.  
 Instead, RLVR primarily improves sampling efficiency — making the model more likely to output correct answers it already “knows.”  
@@ -19,13 +18,13 @@ DeepSeek-R1 combines supervised fine-tuning (SFT) and RL, and finds that for sma
 ---
 
 ### April 2025 — From System 1 to System 2: A Survey of Reasoning Large Language Models
-**Paper:** [arXiv](https://arxiv.org/abs/2502.17419)
+**Paper:** [arXiv](https://arxiv.org/abs/2502.17419) 
 **Summary:** TODO
 
 ---
 
 ### June 2025 — The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity
-**Paper:** [arXiv](https://arxiv.org/abs/2506.06941)
+**Paper:** [arXiv](https://arxiv.org/abs/2506.06941) 
 **Summary:**  
 Examines how large reasoning models allocate computational resources relative to problem complexity.  
 Finds that they overthink simple problems, underthink hard ones, and perform best on medium-difficulty tasks.  
@@ -42,5 +41,5 @@ Critiques common evaluation methods that equate correct answers with human-like 
 ---
 
 ### June 2025 — Hierarchical Reasoning Models
-**Paper:** [arXiv:2509.03646](https://arxiv.org/abs/2509.03646)  
+**Paper:** [arXiv:2509.03646](https://arxiv.org/abs/2509.03646) 
 **Summary:** TODO

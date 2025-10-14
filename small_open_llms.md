@@ -1,6 +1,6 @@
 ## 🤖 Small / Open LLMs
 
-### 2019 — ALBERT: A Lite BERT
+### September 2019 — ALBERT: A Lite BERT
 **Paper:** [arXiv](https://arxiv.org/abs/1909.11942)  
 **Authors:** Lan et al.  
 **Summary:** A lighter BERT variant for self-supervised learning.
@@ -44,7 +44,6 @@ This makes Transformer-based language models more efficient and compact, opening
 
 ### 2020 — It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners
 **Paper:** [arXiv](https://arxiv.org/abs/2009.07118)  
-**ACL Anthology:** [PDF](https://aclanthology.org/2021.naacl-main.185.pdf)  
 **Summary:** TODO
 
 ---

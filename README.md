@@ -1,6 +1,6 @@
 # LLM Paper Index
 
-A living repository of papers on small models, reasoning, architectures, and distillation.
+A living repository of papers on small models, reasoning, architectures, distillation, etc.
 
 - 🤖 [Small / Open LLMs](small_open_llms.md)
 - 🧠 [Reasoning](reasoning.md)

@@ -1,5 +1,6 @@
 ## 🧪 Distillation
-### 2020 — DistilBERT: A Distilled Version of BERT (Sanh et al.)
+### 2020 — DistilBERT: A Distilled Version of BERT
+**Paper:** [arXiv](https://arxiv.org/abs/1910.01108)
 **Summary:** Loss from language modeling, distillation, and cosine-distance. 40% less size retaining 97% of capabilities.
 
 ---

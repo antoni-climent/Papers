@@ -12,7 +12,7 @@ The findings underline the importance of **structured interaction protocols** an
 
 ---
 
-### 2025 — The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers
+### 2025 - The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers
 **Paper:** [Microsoft Study (MSR Link)](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf)  
 
 **Summary:**  
