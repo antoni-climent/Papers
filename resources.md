@@ -26,14 +26,14 @@ A curated collection of courses, books, videos, news, and alignment-related read
 
 ## 📺 3. YouTube Channels & Key Educational Videos
 
-### ▶️ Paper Summaries & Model Explanations
+### Paper Summaries & Model Explanations
 - **AI Papers Academy** — simplified, short paper descriptions  
   [YouTube Channel](https://www.youtube.com/@aipapersacademy)
 
 - **Building Transformers from Scratch** (step-by-step tutorial)  
   [Watch Video](https://www.youtube.com/watch?v=kCc8FmEb1nY&t=4287s)
 
-### 🌐 General AI Topics & Concepts
+### General AI Topics & Concepts
 - **IBM Technology (Explore AI thread)** — educational and conceptual content  
   [YouTube Channel](https://www.youtube.com/@IBMTechnology)
 
@@ -80,3 +80,9 @@ A curated collection of courses, books, videos, news, and alignment-related read
 - [Scientists Discovered Something Disturbing About ChatGPT](https://medium.com/write-a-catalyst/scientists-discovered-something-disturbing-about-chatgpt-a5e2e0972948)  
 - [arXiv:2409.19841v2](https://arxiv.org/pdf/2409.19841v2)
 
+
+## 6. Conferences
+
+- [NAACL New Mexico](https://2025.naacl.org/)
+- [NAACL China](https://2025.emnlp.org/)
+- [NAACL Vienna](https://2025.aclweb.org/)
