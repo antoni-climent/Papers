@@ -1,4 +1,4 @@
-# Other topics
+# ✨ Other topics
 
 ### Effective Skill Unlearning through Intervention and Abstention
 **Paper:** https://arxiv.org/abs/2503.21730
