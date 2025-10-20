@@ -2,6 +2,7 @@
 
 ### April 2025 — RLVR: Does Reinforcement Learning Really Incentivize Reasoning?
 **Paper:** [arXiv:2504.13837](https://arxiv.org/abs/2504.13837)  
+
 **Summary:**  
 The paper evaluates RL with Verifiable Rewards (RLVR) and finds that it does **not** extend reasoning capabilities beyond the base model.  
 Instead, RLVR primarily improves sampling efficiency — making the model more likely to output correct answers it already “knows.”  

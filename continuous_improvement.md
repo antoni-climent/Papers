@@ -13,3 +13,18 @@ AlphaEvolve pairs the creative problem-solving capabilities of Gemini models wit
 **Blog:** [Sakana AI](https://sakana.ai/dgm/)  
 **Video:** [YouTube Discussion](https://www.youtube.com/watch?v=a1L0frpDE4k)  
 **Summary:** TODO
+
+### Can Large Language Models Invent Algorithms to Improve Themselves?:Algorithm Discovery for Recursive Self-Improvement through Reinforcement Learning
+
+**Paper:** [arXiv](https://arxiv.org/abs/2410.15639)
+
+**Summary:** 
+The objective is to iteratively improve a base model by merging it with fine-tuned versions. The contribution is that another SLM is in charge of creating the new merging strategies. 
+The loop goes as follows:
+1. Programming model creates a merging algorithm 
+2. Base model is merged with fine-tuned versions of the same model
+3. Resulting model is evaluated with two benchmarks 
+4. The benchmark results and the merging code is used to create preference data and train the programming model 
+5. Go back to step 1 
+
+What are task vectors?? The weights generated during the training of the LoRA fine tunning. 
