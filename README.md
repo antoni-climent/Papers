@@ -12,3 +12,4 @@ A living repository of papers on small models, reasoning, architectures, distill
 - 📚 [Resources](resources.md) 
 - 🎨 [Fine-tunning](fine_tunning.md)
 - ✨ [Other topics](other_topics.md) 
+- 📝 [Papers to read](papers_to_read.md) 

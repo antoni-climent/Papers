@@ -4,8 +4,23 @@
 **Paper:** [AlphaEvolve (PDF)](https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/AlphaEvolve.pdf)  
 **Blog:** [DeepMind Announcement](https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/)  
 
-**Summary:**  Announced on May 14, 2025, AlphaEvolve is an evolutionary coding agent powered by large language models for general-purpose algorithm discovery and optimization.  
-AlphaEvolve pairs the creative problem-solving capabilities of Gemini models with automated evaluators that verify answers, and uses an evolutionary framework to improve upon the most promising ideas.
+**Summary:** AlphaEvolve is a system that leverages LLMs to iteratively improve a code that solves a problem. They find that for mathematical problems it works better to optimize the code that will find the solution (such as an heuristic search) than trying to find the solution directly. 
+
+It has 4 components:
+1. Prompt optimization 
+2. Automated evaluation functions 
+3. A database with the code instances generated + the evaluation feedback 
+4. An ensamble of LLMs that direct the code evolution 
+
+System workflow:
+1. A human creates an initial prompt with problem definition + examples + initial code to evolve 
+2. LLMs propose changes to the code 
+3. The code is evaluated and both the code and the results are added to a Data Base 
+4. The codes to evolve for the next concurrent iterations are selected from the DB using MAP elites algorithm and island-base population models 
+5. An LLM is also asked to improve the current prompt
+6. Back to step 2
+
+They use this system to optimize 4x4 matrix multiplications, kernel operations, computer center resource managing systems, TPU design, etc.
 
 ---
 
