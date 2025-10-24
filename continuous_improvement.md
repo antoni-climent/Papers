@@ -24,11 +24,6 @@ They use this system to optimize 4x4 matrix multiplications, kernel operations, 
 
 ---
 
-### June 2025 — Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents
-**Blog:** [Sakana AI](https://sakana.ai/dgm/)  
-**Video:** [YouTube Discussion](https://www.youtube.com/watch?v=a1L0frpDE4k)  
-**Summary:** TODO
-
 ### Can Large Language Models Invent Algorithms to Improve Themselves?:Algorithm Discovery for Recursive Self-Improvement through Reinforcement Learning
 
 **Paper:** [arXiv](https://arxiv.org/abs/2410.15639)
@@ -39,7 +34,20 @@ The loop goes as follows:
 1. Programming model creates a merging algorithm 
 2. Base model is merged with fine-tuned versions of the same model
 3. Resulting model is evaluated with two benchmarks 
-4. The benchmark results and the merging code is used to create preference data and train the programming model 
+4. The benchmark results and the merging code is used to create preference data and train the programming model with DPO 
 5. Go back to step 1 
 
 What are task vectors?? The weights generated during the training of the LoRA fine tunning. 
+
+### Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents
+**Paper:** [arXiv](https://arxiv.org/abs/2505.22954) 
+
+**Summary:** 
+They say that improving coding capabilities = learning to improve itself, but I disagree. To make breakthroughs, intuition and knowledge are way more necessary than coding skills.
+
+The system they propose consists in a loop of improvement of the code base that uses closed models to perform programming tasks. They prompt the model to improve both the tools (bash access and edit tool) used and the workflow (such as iterative problem solving and retries, history-aware generation and context management).
+They evaluate all this with some open-source benchmarks and create a DB that the next prompts will use.
+
+NOTE: The title is misleading, there is no self-improving agents, and the evolution of the system that uses the frozen Foundational Models is quite closed. Also, the paper is super repetitive and the writing is verbose. I suspect LLMs have been really involved in the writing. 
+
+
