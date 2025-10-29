@@ -39,6 +39,8 @@ The loop goes as follows:
 
 What are task vectors?? The weights generated during the training of the LoRA fine tunning. 
 
+---
+
 ### Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents
 **Paper:** [arXiv](https://arxiv.org/abs/2505.22954) 
 
@@ -50,4 +52,26 @@ They evaluate all this with some open-source benchmarks and create a DB that the
 
 NOTE: The title is misleading, there is no self-improving agents, and the evolution of the system that uses the frozen Foundational Models is quite closed. Also, the paper is super repetitive and the writing is verbose. I suspect LLMs have been really involved in the writing. 
 
+---
 
+### Mitigating Tail Narrowing in LLM Self-Improvement via Socratic-Guided Sampling
+
+**Paper:** [arXiv](https://arxiv.org/abs/2411.00750)
+
+**Summary:** Self-improvement techniques consist on making the model generate synthetic data that then will be used to continue training the model.
+But due to the Tail Narrowing effect, in which the model only gets better at the things it already knows how to do, the improvement stops at some near point. To mitigate this issue, the paper proposes to guide the synthetic data generation, to make the model more likely to create useful and correct data.
+
+They make it with 4 approaches, they already have a dataset with reasoning paths and answers:
+1. Providing the final answer to the model and letting it create the reasoning.
+2. Providing the reasoning and letting the model generate the final answer.
+3. Provide only a portion of the reasoning path, making the model complete it and generating the answer
+4. When the model fails, a bigger model is prompted to explain the correction, and the inference is re-executed with the new info.
+
+This methods are compared with SFT with the dataset and with the vanilla Self-Improvement implementation.
+Results show that when the fine-tuning is done with 3, the results in the evaluation benchmarks (that are different than the ones used for the fine-tuning) show that 3 works better in general, and that 1 fails when the model do not have enough reasoning capabilities.  
+
+---
+
+### Self-Consuming Generative Models Go MAD
+
+**Paper:** https://openreview.net/forum?id=ShjMHfmPs0
