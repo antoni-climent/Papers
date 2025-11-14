@@ -75,3 +75,12 @@ Results show that when the fine-tuning is done with 3, the results in the evalua
 ### Self-Consuming Generative Models Go MAD
 
 **Paper:** https://openreview.net/forum?id=ShjMHfmPs0
+
+---
+
+### Unlocking LLMs’ Self-Improvement Capacity with Autonomous Learning for Domain Adaptation
+
+Paper: https://aclanthology.org/2025.findings-acl.1084/
+
+
+
