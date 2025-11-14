@@ -82,5 +82,13 @@ Results show that when the fine-tuning is done with 3, the results in the evalua
 
 Paper: https://aclanthology.org/2025.findings-acl.1084/
 
+Summary: They propose a two stage self-training process: The Open-Book and Closed-Book one:
+- Open-Book: They take a data corpora D and prompt the LLM to generate a pair (Q, Ao), where Q -> Question and Ao -> Answer with book opened (having D as context).
+Then they do SFT on this generated QA dataset.
+- Closed-Book: They generate Ac, which are the model's answer to the questions Q without having D as a context, and apply DPO (Direct Preference Optimization) to train the models with the pairs (Ac,Ao).
+They find that this approach improves benchmark performance on the specific domains, better than the baselines: Pre-Training, SFT, RAG, IL (Imbalance Learning), Self-Tuning and SPIN.
 
+
+Questions:
+Does the training loss only apply for the answer tokens? Or all of them? It seems that only to the answer ones. 
 
