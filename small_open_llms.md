@@ -66,4 +66,18 @@ This makes Transformer-based language models more efficient and compact, opening
 **Summary:** TODO
 
 ---
- 
+
+### Small Language Models are the Future of Agentic AI
+**Paper:** https://arxiv.org/abs/2506.02153
+**Summary:** 
+SLM are the future of Agentic AI because:
+- When fine-tuned they have better capabilities than LLM in the specific task (and most agentic tasks are specific)
+- Are more cheap and private 
+- Are more flexible: fine-tuned models are easy and cheap to train 
+
+
+To go from LLM to SLM in an agentic system:
+- Use the LLM to create a dataset of 10k-100k samples 
+- Curate it 
+- fine-tune the SLM 
+- Retrain each x time, to allow it to adapt to new scenarios.
