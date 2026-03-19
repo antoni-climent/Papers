@@ -130,6 +130,20 @@ Results:
 - High-quality supervision is not strictly required for learning role-play style (72B model trained with data from the 1.8 one performs good).
 - Knowledge injection during synthetic dialogue generation significantly improves performance.
 
+### STaR: Self-Taught Reasoner  Bootstrapping Reasoning With Reasoning
+
+They generate a synthetic dataset for x problem using few shot learning. The model generates a rationale to solve it and then provides an answer. If a wrong answer is provided, it is added to the prompt to facilitate the model the writing of the rationale.
+Finally the model is fine-tuned, and the cycle starts again.
+To avoid overfitting, each time the model is fine-tuned, it starts from the base model, and using all the data generated since the beginning.
+
+They generate data for this tasks:
+- 1 to 5 digit additions
+- Commonsense question answering
+- Grade school math (GSM8K)
+
+And in all of them the accuracy is increased.
+
+
 
 TOREAD:
 - Self-instruct: Aligning language models with self-generated instructions (2023)
@@ -142,3 +156,6 @@ TOREAD:
 - Beyond human data: Scaling self-training for problem-solving with language models (2024)
 - Reflexion: an autonomous agent with dynamic memory and self-reflection (2023)
 - Reflexion: Language agents with verbal reinforcement learning. (2024)
+
+
+
