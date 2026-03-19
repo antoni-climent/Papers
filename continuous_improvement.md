@@ -130,3 +130,15 @@ Results:
 - High-quality supervision is not strictly required for learning role-play style (72B model trained with data from the 1.8 one performs good).
 - Knowledge injection during synthetic dialogue generation significantly improves performance.
 
+
+TOREAD:
+- Self-instruct: Aligning language models with self-generated instructions (2023)
+- Star: Self-taught reasoner bootstrapping reasoning with reasoning (2022)
+- Self-rewarding language models (2024)
+- Self-refine: Iterative refinement with self-feedback (2024)
+- Language model self-improvement by reinforcement learning contemplation (2024)
+- Large language models can self-improve (2023)
+- Promptbreeder: Self-referential self-improvement via prompt evolution (2023)
+- Beyond human data: Scaling self-training for problem-solving with language models (2024)
+- Reflexion: an autonomous agent with dynamic memory and self-reflection (2023)
+- Reflexion: Language agents with verbal reinforcement learning. (2024)
