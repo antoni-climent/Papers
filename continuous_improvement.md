@@ -132,9 +132,11 @@ Results:
 
 ### STaR: Self-Taught Reasoner  Bootstrapping Reasoning With Reasoning
 
-They generate a synthetic dataset for x problem using few shot learning. The model generates a rationale to solve it and then provides an answer. If a wrong answer is provided, it is added to the prompt to facilitate the model the writing of the rationale.
+![STaR](images/star.png)
+They generate rationales for a question-answer dataset by using few shot learning. Specifically:
+The model generates a rationale to solve it and then provides an answer. If a wrong answer is provided, it is added to the prompt to facilitate the model the writing of the rationale.
 Finally the model is fine-tuned, and the cycle starts again.
-To avoid overfitting, each time the model is fine-tuned, it starts from the base model, and using all the data generated since the beginning.
+To avoid over-fitting, each time the model is fine-tuned, it starts from the base model, and using all the data generated since the beginning.
 
 They generate data for this tasks:
 - 1 to 5 digit additions
@@ -143,11 +145,14 @@ They generate data for this tasks:
 
 And in all of them the accuracy is increased.
 
+### Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models
 
+They implement an expectation-maximization technique.
+The objective is to allow the model to train itself in a specific domain such as maths or programming. 
+For that they provide a binary reward function that will be used to tell the model if a generated response is correct or not. If so, it will be added to the dataset that will later be used for fine-tuning the model. 
 
 TOREAD:
 - Self-instruct: Aligning language models with self-generated instructions (2023)
-- Star: Self-taught reasoner bootstrapping reasoning with reasoning (2022)
 - Self-rewarding language models (2024)
 - Self-refine: Iterative refinement with self-feedback (2024)
 - Language model self-improvement by reinforcement learning contemplation (2024)
