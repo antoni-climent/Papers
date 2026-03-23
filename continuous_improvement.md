@@ -147,9 +147,19 @@ And in all of them the accuracy is increased.
 
 ### Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models
 
+![Rest_em](images/rest_em.png)
 They implement an expectation-maximization technique.
 The objective is to allow the model to train itself in a specific domain such as maths or programming. 
-For that they provide a binary reward function that will be used to tell the model if a generated response is correct or not. If so, it will be added to the dataset that will later be used for fine-tuning the model. 
+For that they provide a binary reward function that will be used to tell the model if a generated response is correct or not. If so, it will be added to the dataset that will later be used for fine-tuning the model.
+
+Results:
+- It is bettter to train the model from scratch that to perform continuous updates, which produces model degradation.
+- Performance scales with datset size.
+- When performing more than one iteration on the programming data, it degraded the performance of HumanEval, but for maths, it didn't. 
+- No degradation of general capabilities, they use BIG-Bench hard to evaluate.
+- pass@k improves for all k. This is important because it reflects capability (pass@1 reflects reliability instead)
+
+
 
 TOREAD:
 - Self-instruct: Aligning language models with self-generated instructions (2023)
@@ -158,9 +168,5 @@ TOREAD:
 - Language model self-improvement by reinforcement learning contemplation (2024)
 - Large language models can self-improve (2023)
 - Promptbreeder: Self-referential self-improvement via prompt evolution (2023)
-- Beyond human data: Scaling self-training for problem-solving with language models (2024)
 - Reflexion: an autonomous agent with dynamic memory and self-reflection (2023)
 - Reflexion: Language agents with verbal reinforcement learning. (2024)
-
-
-
