@@ -159,6 +159,18 @@ Results:
 - No degradation of general capabilities, they use BIG-Bench hard to evaluate.
 - pass@k improves for all k. This is important because it reflects capability (pass@1 reflects reliability instead)
 
+### A Comprehensive Survey on Continual Learning  in Generative Models
+
+![continual-learning](images/cont_learn_survey_gen_mod.png)
+This survey classifies the continual-learning techniques in 3 groups:
+- Arquitecture-based: Where arquitecture modules are added/modified to the base-model.
+- Regularization-based: This techniques try to prevent the initial distribution from changing too much, as it produces forgetting.
+- Replay-based: The data used to train the model or synthetic auto-generated data is used to mix with the new task data, mitigating forgetting.
+
+Interesting ideas presented:
+- When doing continual-learning, performance drops for disrupted alignment, not for erased knowledge.
+- Forgetting happens becouse of biased function activation, not for parameter overwriting. 
+
 
 
 TOREAD:
