@@ -159,6 +159,34 @@ Results:
 - No degradation of general capabilities, they use BIG-Bench hard to evaluate.
 - pass@k improves for all k. This is important because it reflects capability (pass@1 reflects reliability instead)
 
+### LLM Orbit
+![LLM Orbit](images/orbit_1.png)
+![LLM Orbit](images/orbit_2.png)
+
+#### Paradigm shifts:
+- Post-training dominance (RL)
+- Test-time compute scaling
+- Efficiency revolution (Multi-head latent attention, moes, flash attn, GQA, quantization, etc.) -> 100x cost reduction in the last 2 years
+
+
+#### Challenges and future directions:
+- Evaluating reasoning beyond final answers
+- Make the test-time compute adaptive to problem complexity
+- Verifiable rewards on open-ended problems.
+- Incorporate new info without retraining nor catastrphic forgetting
+- Correcting errors and updating knowledge (model editing)
+- Personalizing to user preferences over time
+- Ensure synthetic data quality (avoiding model collapse from training on own outputs)
+- Curriculum that target capability gaps
+- Understanding theoretical limits of self-improvement
+
+Extra notes:
+
+Model collapse depends on:
+- The ratio of synthetic to real/high-quality data
+- Whether the synthetic data is diverse
+- Whether it is filtered for correctness
+- Whether it targets useful capability gaps instead of just recycling typical outputs
 
 
 TOREAD:
