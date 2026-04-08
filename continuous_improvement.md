@@ -187,8 +187,35 @@ Model collapse depends on:
 - Whether the synthetic data is diverse
 - Whether it is filtered for correctness
 - Whether it targets useful capability gaps instead of just recycling typical outputs
+### A Comprehensive Survey on Continual Learning  in Generative Models
+
+![continual-learning](images/cont_learn_survey_gen_mod.png)
+
+This survey classifies the continual-learning techniques in 3 groups:
+- Arquitecture-based: Where arquitecture modules are added/modified to the base-model.
+- Regularization-based: This techniques try to prevent the initial distribution from changing too much, as it produces forgetting.
+- Replay-based: The data used to train the model or synthetic auto-generated data is used to mix with the new task data, mitigating forgetting.
+
+Interesting ideas presented:
+- When doing continual-learning, performance drops for disrupted alignment, not for erased knowledge.
+- Forgetting happens becouse of biased function activation, not for parameter overwriting. 
+
+### DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning
+![deepseek_r1](images/deepseek_r1.png)
+
+The image ilustrates the pipeline used for the Deepseek-R1 training.
+
+They use GRPO (Grouped Relative Policy Optimization) as the RL algorithm, which consists on generating with a model several responses, evaluating the outcome with a rule-based model, and computing the reword for each one in relation to the others and normalized: $$r = r - \frac{\text{avg}(r_s)}{\text{std}(r_s)}$$
+Where r is the reward, and rs all of them grouped.
+
+Findings:
+- The model can do reward hacking during training
+- RL algorithm makes discovers autonomously techniques to improve response accuracy such as: re-evaluate, double-check results, validate, allocate thinking time (in tokens), valance exploration and exploitation.
+- Imposing human way to think through SFT -> Worse model performance 
+- To compute reward, they use both rule-based techniques (for coding and mathematics) and other LLMs, changing the head to output a reward number (they need additional training).
 
 
+---
 TOREAD:
 - Self-instruct: Aligning language models with self-generated instructions (2023)
 - Self-rewarding language models (2024)
