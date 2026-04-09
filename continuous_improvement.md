@@ -215,6 +215,14 @@ Model collapse depends on:
 - Whether it is filtered for correctness
 - Whether it targets useful capability gaps instead of just recycling typical outputs
 
+
+### Continual Learning with Pre-Trained Models: A Survey
+
+This paper focuses on classification tasks, and classifies the CL (continual learning) in three classes:
+- Prompt based: Where a learned prompt is appended to the input during the inference. This shifts the model distribution to also be able to classify the new classes.
+- Representation based: It computes for each class the mean of an intermediate state of the network, and then during inference it compares the intermediate state of the input with the mean of each class and outputs the class with the most similar representation.
+- Model mixture: Here it mixes different models to aliviate forgetting. 
+
 ---
 TOREAD:
 - Self-instruct: Aligning language models with self-generated instructions (2023)
