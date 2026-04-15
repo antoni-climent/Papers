@@ -223,6 +223,26 @@ This paper focuses on classification tasks, and classifies the CL (continual lea
 - Representation based: It computes for each class the mean of an intermediate state of the network, and then during inference it compares the intermediate state of the input with the mean of each class and outputs the class with the most similar representation.
 - Model mixture: Here it mixes different models to aliviate forgetting. 
 
+
+### Continual Learning of Large Language Models: A Comprehensive Survey
+
+They argue that there is vertical and horizontal continuous learning (CL).
+
+![cl_survey](images/cl_survey.png)
+
+Vertical is the one that specializes the model on one topic/task and is divided in:
+- Pre-Training: Described as understudied. The current best approach is to use architecture expansion techniques.
+- Domain Adaptive Pre-Training (DAP)
+- Task fine-tuning
+
+Then, there is the horizontal CL that are the model updates regarding the information changes, new discoveries, etc. It is the one that ensures that the model is up to date, as well as the most difficult to perform without catastrophic forgetting (the distribution shifts are higher than in the vertical CL)
+
+Interesting facts:
+- The location for storing the fact may not coincide with the best place for editing it
+- When fine-tuned sequentially and cyclically on a series of documents, large models exhibit a phenomenon known as "anticipatory recovering". This suggest that LM may be capable of sequential memorization  
+IDEA:
+- Find less important weights (pruning algorithm) + fine-tuning only those weights -> Less forgetting?
+
 ---
 TOREAD:
 - Self-instruct: Aligning language models with self-generated instructions (2023)
@@ -233,3 +253,4 @@ TOREAD:
 - Promptbreeder: Self-referential self-improvement via prompt evolution (2023)
 - Reflexion: an autonomous agent with dynamic memory and self-reflection (2023)
 - Reflexion: Language agents with verbal reinforcement learning. (2024)
+
