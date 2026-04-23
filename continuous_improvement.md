@@ -243,6 +243,21 @@ Interesting facts:
 IDEA:
 - Find less important weights (pruning algorithm) + fine-tuning only those weights -> Less forgetting?
 
+### LLM Post-Training: A Deep Dive into Reasoning  Large Language Models
+
+![rl_sft_overview](images/llm_post_training.png)
+
+In this paper they make a summary of the most popular RL and SFT techniques. They also explain test-time scaling  methods and benchmarks.
+
+In summary, RL techniques rely on external verification, that can be at the end of the run, or at each step.
+Explained techniques include RLHF, OREO, GRPO, ORPO (Odds Ratio Preference Optimization), RLAIF, DPO, PPO, TRPO.
+
+SFT is used for dialogue (multiturn) fine-tuning, CoT reasoning, Domain-specific knowledge acquisition, distillation, preference alignment and PEFT.
+
+Test-time scaling methods include beam search, rejection sampling, compute-optimal scaling, chain of thought prompting, self-consistency decoding, tree of thoughts, graph of thoughts, confidence-based sampling (looks at the perplexity), search against verifiers, self-improvement via refinements, monte carlo tree search and chain-of-action-thought reasoning.
+
+Future directions include Self-rewarding LLMs (still struggles from reward hacking), personalization, fine-tuning without catastrophic forgetting, enable LLMs to say "I don't know", and make LLMs dynamically allocate compute based on problem complexity. 
+
 ---
 TOREAD:
 - Self-instruct: Aligning language models with self-generated instructions (2023)
