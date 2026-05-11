@@ -66,3 +66,15 @@ Results found that:
 - Commutativity correlates strongly with human preferences (they also compared model outputs with the dataset labels)
 - "Surprisingly, CoT reasoning did not generally improve consistency, and in some cases, it led to a decrease in transitivity performance"
 - Training with REPAIR improves transitivity and commutativity
+
+### Empowering LLMs with Logical Reasoning: A comprehensive survey
+Logical consistency refers to the ability of LLMs to generate responses that are consistent with each other, over different prompts. (Which brings reliability and trustworthiness).
+
+They divide it in four groups: Negation invariance, implication, transitivity, factual and composition consistency (keeping various types of consistency at the same time).
+
+They also differentiate three type of techniques to solve it:
+- Solver-based method, where a tool is used to solve a logic equation. Here the propositions generated must be self-contained and without mistakes.
+- Prompt-based method, where the LLM is prompted to do output the logical chain (which can fail)
+- Fine-tuning method, where the LLM is fine-tuned. Doing it for a specific logical type does not imply an improvement for the others.
+
+
