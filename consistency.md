@@ -39,3 +39,35 @@ Results:
 - Combining dimensions helps more: aggregating across order, paraphrase, and language usually gives the best or near-best accuracy.
 - COC and CPC strongly correlate with model accuracy, so they may be useful as confidence/uncertainty signals without needing the gold answer
 
+### RoParQ: Paraphrase-Aware Alignment of Large Language Models Towards Robustness to Paraphrased Questions
+
+This paper studies whether LLMs give consistent answers when the same multiple-choice question is paraphrased.
+
+They introduce **RoParQ**, a benchmark made from MMLU, ARC, CommonsenseQA, and MathQA. Each question has three versions:
+
+* Original
+* Gemini paraphrase
+* Claude paraphrase
+
+They also propose **XParaCon**, a metric that measures how stable model accuracy is across paraphrases.
+XParaCon is computed by first measuring the model accuracy for each question variant across 8 shuffled answer-choice orders:
+
+- `acc(q_original)`
+- `acc(q_gemini)`
+- `acc(q_claude)`
+
+Then, they compute the standard deviation of these three accuracies. If the model performs similarly across all paraphrases, the standard deviation is low. Finally, they average this value across all examples and apply `-log2`, so higher XParaCon means better paraphrase consistency.
+
+They train models with a paraphrase-aware SFT method, where the model restates the question, creates a paraphrase, checks that the answer stays the same, and then answers.
+
+Results found that:
+
+* LLMs are sensitive to wording changes.
+* Larger models are usually more robust.
+* Claude 3.5 Sonnet had the strongest overall robustness.
+* Paraphrase-aware fine-tuning improves consistency.
+* Small fine-tuned models can become as robust as much larger pre-trained models.
+
+
+### Enhancing Semantic Consistency of Large Language Models through Model Editing: An Interpretability-Oriented Approach
+
