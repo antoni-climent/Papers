@@ -68,6 +68,42 @@ Results found that:
 * Paraphrase-aware fine-tuning improves consistency.
 * Small fine-tuned models can become as robust as much larger pre-trained models.
 
-
 ### Enhancing Semantic Consistency of Large Language Models through Model Editing: An Interpretability-Oriented Approach
 
+This paper studies **semantic consistency**: whether an LLM gives the same answer to prompts with the same meaning but different wording.
+
+They propose an interpretability-based **model editing** method instead of using expensive fine-tuning.
+
+Their method:
+
+* Builds paraphrased prompt pairs using GPT-4.
+* Finds model components, mainly attention heads and MLPs, that are related to consistency errors.
+* Adds biases to those components in a direction that makes the model more semantically consistent.
+
+They locate important components by training linear classifiers on each component’s hidden states. If a component can predict whether the model will be consistent or inconsistent, it is considered important.
+
+The bias they add is computed as the difference between the average activation of **consistent samples** and the average activation of **all samples** for a selected component:
+
+`bias = mean(consistent activations) - mean(all activations)`
+
+Then, during inference, they edit the component by adding this direction to its activation:
+
+`edited activation = original activation + α · bias`
+
+So the model is pushed toward activation patterns associated with semantically consistent behavior.
+
+They also introduce three NLU benchmarks:
+
+* RobustSST2
+* RobustMRPC
+* RobustBOOLQ
+
+Results found that:
+
+* Middle-to-late layers are most related to semantic consistency.
+* Editing selected components improves both consistency and accuracy.
+* Random component editing or random editing directions hurt performance.
+* The method generalizes reasonably well to out-of-domain tasks.
+* SFT performs better overall, but model editing is much cheaper, using 12x to 23x fewer GPU hours.
+
+The main takeaway is that semantic consistency can be improved by editing specific internal components of the model, not only by fine-tuning on paraphrases.
