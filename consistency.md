@@ -39,6 +39,8 @@ Results:
 - Combining dimensions helps more: aggregating across order, paraphrase, and language usually gives the best or near-best accuracy.
 - COC and CPC strongly correlate with model accuracy, so they may be useful as confidence/uncertainty signals without needing the gold answer
 
+---
+
 ### RoParQ: Paraphrase-Aware Alignment of Large Language Models Towards Robustness to Paraphrased Questions
 
 This paper studies whether LLMs give consistent answers when the same multiple-choice question is paraphrased.
@@ -107,3 +109,94 @@ Results found that:
 * SFT performs better overall, but model editing is much cheaper, using 12x to 23x fewer GPU hours.
 
 The main takeaway is that semantic consistency can be improved by editing specific internal components of the model, not only by fine-tuning on paraphrases.
+
+---
+
+### Robustness in Large Language Models: A Survey of Mitigation Strategies and Evaluation Metrics
+This paper review classifies robustness enhancing strategies in four types:
+
+1. Pre-processing: Actions taken on the data before model training or fine-tuning begins (e.g., data cleaning, augmentation).  
+2. In-processing: Modifications integrated during the model training or fine-tuning process (e.g., robust optimization, adversarial training, alignment techniques).  
+3. Intra-processing: Techniques applied during the model’s inference or generation phase (e.g., robust prompting, modified decoding, inference-time adaptation).  
+4. Post-processing: Methods applied after the model generates an output, but before it is presented to the user or used downstream (e.g., output filtering, validation, using a judge model).
+
+---
+
+### Information-consistent language model recommendations through group relative policy optimization
+They apply GRPO to consistency.
+To do that they use two loss functions:
+#### 1. For helpfulness they use the Shannon entropy formula:
+$$
+H(r) = -\sum_v p(v) \log p(v)
+$$
+They state that "Higher entropy indicates information-rich, complete responses."
+
+And they normalize it:
+$$
+H_{\text{norm}}(r) = \frac{H(r) - H_{\min}}{H_{\max} - H_{\min}}
+$$
+
+#### 2. For consistency they use the entropy gap of two semantically equivalent prompts:
+
+$$
+\text{Gap} = \left|H(r^a) - H(r^b)\right|
+$$
+
+"A normalized stability score $F_{norm} \in [0,1]$ is obtained by scaling and inverting this gap (smaller gaps -> higher stability).
+
+For a group \(G\) of size \(K\), the aggregate stability measure is:
+
+$$F_{\mathrm{norm}} = 1 - \frac{1}{K}\sum_{k=1}^{K}\frac{\left|H(r(q_k^{(i)}))-H(r(q_k^{(j)}))\right|}{\mathrm{MAX\_GAP}}.$$
+
+Here, MAX_GAP is the maximum difference between the entropies of the two groups."
+
+Then they use alpha an beta variables to do a wheighted sum of both formulas.
+
+---
+
+### Consistency in Language Models: Current Landscape, Challenges, and Future Directions
+
+#### Types of Consistency
+
+##### 1. Logical Consistency
+
+Refers to consistency based on formal logical relationships, including:
+
+* Negational consistency
+* Symmetric consistency
+* Transitive consistency
+* Additive consistency
+
+##### 2. Semantic Consistency
+
+The ability of a model to make consistent decisions across semantically equivalent contexts.
+
+##### 3. Nonlogical or Informal Consistency
+
+Covers definitions of consistency that do not follow the rules of formal logic.
+
+##### 4. Factual Consistency
+
+The ability of a model to generate new information without contradicting the source document.
+
+##### 5. Self-Consistency
+
+Examines whether similar inputs produce consistent explanations or outputs.
+
+##### 6. Faithfulness
+
+Evaluates whether the generated text accurately reflects the model’s actual reasoning process.
+
+#### Future Research Directions
+
+* **Multilingual consistency**
+* **Cross-lingual consistency**
+* **Consistency evaluation**
+* **Improving consistency**
+* **Structural foundations of consistency**
+* **Representational spaces**
+* **Consistency-oriented pre-training**
+* **Architectures designed to maintain consistency across diverse contexts**
+
+---
+
