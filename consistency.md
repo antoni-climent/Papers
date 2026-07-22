@@ -200,3 +200,48 @@ Evaluates whether the generated text accurately reflects the model’s actual re
 
 ---
 
+### Metamorphic Testing of Large Language Models for Natural Language Processing
+
+This paper studies whether **metamorphic testing (MT)** can detect inconsistent LLM behavior without needing a labelled correct answer for every input.
+
+The authors review 44 studies and collect 191 metamorphic relations, then introduce **LLMORPH**, a framework that implements 36 of them. **LLMORPH** uses two methods to generate extra data: function-based and LLM-based. The first is programmed modification, such as adding a random phrase at the end of the prompt or adding keyboard mistakes (NLPAug library). And the seccond uses an LLM to generate paraphrasings.
+As evaluation tasks they used question answering with context (QAc), natural language inference (NLI), sentiment analysis (SA), and relation extraction (RE).
+
+A metamorphic relation defines how an output should change or remain the same after modifying the input. For example, paraphrasing a question should usually preserve the answer. If the output changes unexpectedly, the model may be inconsistent.
+
+They test GPT-4, Llama 3.1, and Hermes 2 on four NLP tasks, running about 561,000 tests.
+
+The general workflow is as the follows:
+Get data QA -> Do data augmentation -> Do Metamorphic testing -> Evaluate output distances (Using BERT)
+
+Results found that:
+
+- The average violation rate was **18%**.
+- MT found faults missed by traditional labelled testing.
+- About **62%** of manually checked violations were genuine faults.
+- False positives often came from poor transformations or difficulty comparing free-form answers.
+- Results depended more on the task and relation than on the model.
+- Model randomness was not the main cause of failures.
+
+The main takeaway is that MT is a useful low-cost complement to labelled benchmarks, but false positives remain a major limitation.
+
+---
+
+| Title                                                                                           | Verified year | Publication site                                                                                                                                                        |
+| ----------------------------------------------------------------------------------------------- | ------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Consistency in Language Models: Current Landscape, Challenges, and Future Directions            |          2025 | [ICML 2025 Workshop on Reliable and Responsible Foundation Models — OpenReview](https://openreview.net/forum?id=ejvvhJZJSf)                                             |
+| Internal Consistency and Self-Feedback in Large Language Models: A Survey                       |          2024 | [arXiv](https://arxiv.org/abs/2407.14507) — no formal venue verified                                                                                                    |
+| Bidirectional Empowerment of Metamorphic Testing and Large Language Models: A Systematic Survey |          2026 | [arXiv](https://arxiv.org/abs/2605.13898) — no ACM publication record verified                                                                                          |
+| Evaluating and Improving Robustness in Large Language Models: A Survey and Future Directions    |          2025 | [arXiv](https://arxiv.org/abs/2506.11111) — no formal venue verified                                                                                                    |
+| Self-Consistency Improves Chain-of-Thought Reasoning in Language Models                         |          2023 | [International Conference on Learning Representations — ICLR 2023](https://openreview.net/forum?id=1PL1NIMMrw)                                                          |
+| BECEL: Benchmark for Consistency Evaluation of Language Models                                  |          2022 | [29th International Conference on Computational Linguistics — COLING 2022](https://aclanthology.org/2022.coling-1.324/)                                                 |
+| Semantic Consistency for Assuring Reliability of Large Language Models                          |          2023 | [arXiv](https://arxiv.org/abs/2308.09138) — no formal venue verified                                                                                                    |
+| ProSA: Assessing and Understanding the Prompt Sensitivity of LLMs                               |          2024 | [Findings of EMNLP 2024](https://aclanthology.org/2024.findings-emnlp.108/)                                                                                             |
+| What Did I Do Wrong? Quantifying LLMs’ Sensitivity and Consistency to Prompt Engineering        |          2025 | [NAACL 2025 — Long Papers](https://aclanthology.org/2025.naacl-long.73/)                                                                                                |
+| Metamorphic Testing of Large Language Models for Natural Language Processing                    |          2025 | [IEEE International Conference on Software Maintenance and Evolution — ICSME 2025](https://www.computer.org/csdl/proceedings-article/icsme/2025/958700a174/2bgg0S2ty00) |
+| Self-Consistency of Large Language Models under Ambiguity                                       |          2023 | [BlackboxNLP 2023](https://aclanthology.org/2023.blackboxnlp-1.7/)                                                                                                      |
+| Evaluating Robustness of LLMs to Numerical Variations in Mathematical Reasoning                 |          2025 | [Sixth Workshop on Insights from Negative Results in NLP](https://aclanthology.org/2025.insights-1.16/)                                                                 |
+| Metamorphic Testing for Semantic Invariance in Large Language Models                            |          2025 | [IEEE Access](https://ieeexplore.ieee.org/document/11305018)                                                                                                            |
+| **Towards** Reasoning in Large Language Models: A Survey                                        |      **2023** | [Findings of ACL 2023](https://aclanthology.org/2023.findings-acl.67/)                                                                                                  |
+| The Prompt Report: A Systematic Survey of Prompting Techniques                                  |          2024 | [arXiv](https://arxiv.org/abs/2406.06608) — no formal venue verified                                                                                                    |
+| Language Model Behavior: A Comprehensive Survey                                                 |          2024 | [Computational Linguistics, volume 50, issue 1 — MIT Press](https://direct.mit.edu/coli/article/50/1/293/118131/Language-Model-Behavior-A-Comprehensive-Survey)         |
